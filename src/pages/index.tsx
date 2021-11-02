@@ -1,5 +1,5 @@
-import { GetStaticsProps } from 'next';
-import { apiResolver } from 'next/dist/server/api-utils';
+import { GetStaticProps } from 'next';
+import { api } from '../services/api';
 
 type Episode = {
   id: string;
@@ -21,7 +21,7 @@ export default function Home(props:HomeProps) {
   )
 }
 
-export const getStaticProps: GetStaticsProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const {data} = await api.get('episodes', {
     params:{
       _limit: 12,
