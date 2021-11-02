@@ -11,7 +11,8 @@ export function Header(){
         
             <img src="/podcastr-logo.svg" alt="podcastr" />
         <p>O melhor para você ouvir, sempre</p>
-        <span>{currentDate}</span>
+        
+         <span>{currentDate}</span>
         </header>
 
     );
