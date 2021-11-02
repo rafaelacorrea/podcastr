@@ -22,7 +22,7 @@ export default function Home(props:HomeProps) {
 }
 
 export const getStaticProps: GetStaticsProps = async () => {
-  const {data} = await apiResolver.get('episodes', {
+  const {data} = await api.get('episodes', {
     params:{
       _limit: 12,
       _sort: 'published_at',
